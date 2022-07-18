@@ -82,13 +82,19 @@ API_URL env variable points to the URL hosting the rules, public keys and minimu
 yarn run ios
 ```
 
-#TODO: @amos add steps about getting xcode, developer.apple account, whatever else I need to do to get this running.
+#TODO: @amos add steps about getting xcode, developer.apple account, whatever else I need to do to get this running. 
+
+#TODO: put `--port=8088` into every script in `package.json` Update applications to load JavaScript bundle from new port. In Xcode,  do this by updating occurrences of 8081 to your chosen port in the `ios/__App_Name__.xcodeproj/project.pbxproj` file. 
 
 ##### Android
+
+#TODO:  Maybe run ? `adb reverse tcp:8081 tcp:8088` Maybe cmd-M to open dev settings -> settings -> "Debug server host & port for device".
 
 ```bash
 yarn run android
 ```
+
+#TODO: Even after following react native setup guide, I was having issues with emulator, I had to go into android studio, device manager, create a device, start the emulator, wait for the phone to fully boot, then run this.
 
 ## Rules, Public keys and Minimum mandatory app version
 

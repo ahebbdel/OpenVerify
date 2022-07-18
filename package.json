@@ -5,15 +5,15 @@
   "repository": "github:ongov/OpenVerify",
   "private": true,
   "scripts": {
-    "clean": "react-native clean-project-auto",
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
-    "ipad": "react-native run-ios --simulator='iPad Air'",
-    "start": "npx react-native start",
+    "clean": "react-native clean-project-auto --port=8088",
+    "android": "react-native run-android --port=8088",
+    "ios": "react-native run-ios --port=8088",
+    "ipad": "react-native run-ios --port=8088 --simulator='iPad Air'",
+    "start": "npx react-native start --port=8088",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "update:pods": "cd ios && pod install --repo-update && cd ..",
-    "android:debug": "react-native run-android",
+    "android:debug": "react-native run-android --port=8088",
     "android:release": "cd android && ./gradlew assembleRelease && cd .."
   },
   "dependencies": {
